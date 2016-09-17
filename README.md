@@ -45,7 +45,7 @@ Open Caravel in browser using the following link:
 ```
 http://docker_host_ip:8088
 User: admin
-Password: caravel-admin
+Password: caravel_admin
 ```
 
 Connect to running container with
