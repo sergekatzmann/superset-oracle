@@ -23,7 +23,7 @@ RUN export PATH=$PATH:/usr/local/instantclient/bin
 
 RUN echo '/usr/local/instantclient/' | tee -a /etc/ld.so.conf.d/oracle_instant_client.conf && ldconfig
 
-RUN apt-get install libaio-dev -y && apt-get clean -y
+RUN apt-get install libaio-dev libsasl2-dev libldap2-dev -y && apt-get clean -y
 
 # Install caravel
 RUN pip install cx_Oracle caravel
