@@ -1,15 +1,15 @@
-# Docker container for Caravel demo with Oracle 11.2 client.
+# Docker container for Superset demo with Oracle 11.2 client.
 
 Objective
 ------------
-The purpose of this project is to create a caravel container with oracle client to allow the data analyses/visualization of data stored in an oracle database. The oracle client used is 11.2.0.4
+The purpose of this project is to create a superset container with oracle client to allow the data analyses/visualization of data stored in an oracle database. The oracle client used is 11.2.0.4
 
 Requirements
 ------------
 Docker
-Ports available: 
+Ports available:
 
-Caravel
+Superset
 ```
 8088
 ```
@@ -26,7 +26,7 @@ sudo ./build.sh
 or
 
 ```
-docker build -t sergekatzmann/caravel-oracle .
+docker build -t sergekatzmann/superset-oracle .
 ```
 
 Run container in daemon mode with
@@ -38,14 +38,14 @@ sudo ./run.sh
 or
 
 ```
-docker run -p 8088:8088 -d sergekatzmann/caravel-oracle
+docker run -p 8088:8088 -d sergekatzmann/superset-oracle
 ```
 
-Open Caravel in browser using the following link:
+Open Superset in browser using the following link:
 ```
 http://docker_host_ip:8088
 User: admin
-Password: caravel_admin
+Password: superset_admin
 ```
 
 Connect to running container with
