@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -p 8088:8088 -d sergekatzmann/caravel-oracle
+docker run -p 8888:8088 -d sergekatzmann/superset-oracle

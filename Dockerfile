@@ -25,24 +25,24 @@ RUN echo '/usr/local/instantclient/' | tee -a /etc/ld.so.conf.d/oracle_instant_c
 
 RUN apt-get install libaio-dev libsasl2-dev libldap2-dev -y && apt-get clean -y
 
-# Install caravel
-RUN pip install cx_Oracle caravel
+# Install superset
+RUN pip install cx_Oracle superset
 
-# copy admin password details to /caravel for fabmanager
-RUN mkdir /caravel
-COPY admin.config /caravel/
+# copy admin password details to /superset for fabmanager
+RUN mkdir /superset
+COPY admin.config /superset/
 
 # Create an admin user
-RUN /usr/local/bin/fabmanager create-admin --app caravel < /caravel/admin.config
+RUN /usr/local/bin/fabmanager create-admin --app superset < /superset/admin.config
 
 # Initialize the database
-RUN caravel db upgrade
+RUN superset db upgrade
 
 # Create default roles and permissions
-RUN caravel init
+RUN superset init
 
 # Load some data to play with
-RUN caravel load_examples
+RUN superset load_examples
 
 # Start the development web server
-CMD caravel runserver -d
+CMD superset runserver -d

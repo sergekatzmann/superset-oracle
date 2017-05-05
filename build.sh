@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t sergekatzmann/caravel-oracle .
+docker build -t sergekatzmann/superset-oracle .
