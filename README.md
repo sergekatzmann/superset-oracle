@@ -1,4 +1,4 @@
-# Docker container for Superset demo with Oracle 11.2 client.
+# Unofficial docker container for Apache Superset demo with Oracle 11.2 client.
 
 Objective
 ------------
@@ -52,3 +52,12 @@ Connect to running container with
 ```
 docker exec -it <container_id> /bin/bash
 ```
+
+Disclaimer
+------------
+This project is an unofficial example demo of the usage of [Apache Superset][apache-superset-url] with [Oracle][oracle-url]. It is powered by [Apache Superset][apache-superset-url] and [Oracle][oracle-url].
+
+Apache Superset, Apache, Superset, the Superset logo, and the Apache feather logo are either registered trademarks or trademarks of The Apache Software Foundation.
+
+[apache-superset-url]: <https://superset.apache.org/>
+[oracle-url]:<https://www.oracle.com/>
